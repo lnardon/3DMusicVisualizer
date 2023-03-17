@@ -1,4 +1,4 @@
-# (3DMusicVisualizer)[https://lnardon.github.io/3DMusicVisualizer/]
+# [3DMusicVisualizer](https://lnardon.github.io/3DMusicVisualizer/)
 
 A 3D music visualizer using Three.js and custom GLSL shaders.
 
