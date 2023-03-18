@@ -16,8 +16,10 @@
     />
   </head>
   <body>
-    <h1 class="title">3D Music Visualizer</h1>
-    <h3 class="musicName">Vivaldi - Four Seasons (Winter)</h3>
+    <div id="titleContainer">
+      <h1 class="title">3D Music Visualizer</h1>
+      <h3 class="musicName">Vivaldi - Four Seasons (Winter)</h3>
+    </div>
     <audio
       id="audio"
       src="./winter-short.mp3"
@@ -25,5 +27,8 @@
       controls
     ></audio>
     <canvas id="canvas"></canvas>
+    <div class="controls">
+      <button class="playBtn">Start</button>
+    </div>
   </body>
 </html>

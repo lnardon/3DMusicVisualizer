@@ -48,7 +48,7 @@ function letThereBelight() {
   spotLight2.shadow.camera.fov = 70;
   scene.add(spotLight2);
 
-  // SETUP NALYZER
+  // SETUP ANALYZER
   let audioContext, audioElement, dataArray, analyser, source;
   const uniforms = {
     uTime: {
@@ -76,7 +76,6 @@ function letThereBelight() {
   scene.add(mesh);
 
   function setupAudioContext() {
-    audioElement = document.getElementById("audio").play();
     audioContext = new window.AudioContext();
     audioElement = document.getElementById("audio");
     source = audioContext.createMediaElementSource(audioElement);
@@ -117,6 +116,7 @@ function letThereBelight() {
   );
 }
 
-setTimeout(() => {
+document.getElementsByClassName("playBtn")[0].addEventListener("click", () => {
+  document.getElementById("audio").play();
   letThereBelight();
-}, 5000);
+});
