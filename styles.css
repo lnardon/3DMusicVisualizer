@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+}
+
 canvas {
   position: absolute !important;
   width: 100% !important;
@@ -12,11 +18,43 @@ canvas {
 
 .title {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  font-size: 2rem;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2.5rem;
   font-weight: 700;
   z-index: 1;
-  color: bisque;
-  transition: all 0.4s ease-in-out;
+  color: #fff;
+  animation: appear 1.1s ease forwards;
+}
+
+.musicName {
+  position: absolute;
+  top: 4.25rem;
+  left: 1.25rem;
+  font-size: 1rem;
+  font-weight: 300;
+  z-index: 1;
+  color: #f1f1f1;
+  font-style: italic;
+  animation: appear 1.1s 0.5s ease forwards;
+  opacity: 0;
+}
+
+#audio {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    left: 0rem;
+  }
+
+  to {
+    opacity: 1;
+    left: 1rem;
+  }
 }
