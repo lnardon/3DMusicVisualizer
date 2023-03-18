@@ -18,8 +18,8 @@ canvas {
 
 .title {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 1.5rem;
+  left: 1.5rem;
   font-size: 2.5rem;
   font-weight: 700;
   z-index: 1;
@@ -30,7 +30,7 @@ canvas {
 .musicName {
   position: absolute;
   top: 4.25rem;
-  left: 1.25rem;
+  left: 3rem;
   font-size: 1rem;
   font-weight: 300;
   z-index: 1;
@@ -62,18 +62,22 @@ canvas {
 }
 
 .playBtn {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.25rem;
   cursor: pointer;
   font-size: 1.125rem;
   font-weight: 700;
   border: none;
-  background-color: cyan;
+  background-color: rgb(52, 245, 27);
   border-radius: 0.125rem;
   transition: all 0.5s ease;
 }
 
 .playBtn:hover {
   transform: scale(1.1);
+}
+
+audio {
+  display: none;
 }
 
 @keyframes appear {

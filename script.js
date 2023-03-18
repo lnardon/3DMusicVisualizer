@@ -64,7 +64,7 @@ function letThereBelight() {
       value: 3.0,
     },
   };
-  const geometry = new THREE.PlaneGeometry(96, 96, 96, 96);
+  const geometry = new THREE.PlaneGeometry(128, 128, 128, 128);
   const material = new THREE.ShaderMaterial({
     uniforms: uniforms,
     vertexShader: vertexShader,
@@ -82,7 +82,7 @@ function letThereBelight() {
     analyser = audioContext.createAnalyser();
     source.connect(analyser);
     analyser.connect(audioContext.destination);
-    analyser.fftSize = 1024;
+    analyser.fftSize = 1024 * 32;
     dataArray = new Uint8Array(analyser.frequencyBinCount);
   }
 
@@ -116,7 +116,19 @@ function letThereBelight() {
   );
 }
 
+function handleFile(e) {
+  let files = e.target.files;
+  document
+    .getElementById("audio")
+    .setAttribute("src", URL.createObjectURL(files[0]));
+  document.getElementById("audio").load();
+}
+
 document.getElementsByClassName("playBtn")[0].addEventListener("click", () => {
   document.getElementById("audio").play();
   letThereBelight();
 });
+
+document
+  .getElementById("fileUpload")
+  .addEventListener("change", handleFile, false);
