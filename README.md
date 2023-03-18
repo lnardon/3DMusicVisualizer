@@ -2,7 +2,9 @@
 
 A 3D music visualizer using Three.js and custom GLSL shaders.
 
-<video src="./demo.mp4" autoplay muted loop></video>
+<p align="center" style="height: 450px">
+  <img src="./demo.gif">
+</p>
 
 ### What was used
 
