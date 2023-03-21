@@ -124,9 +124,24 @@ function handleFile(e) {
   document.getElementById("audio").load();
 }
 
-document.getElementsByClassName("playBtn")[0].addEventListener("click", () => {
-  document.getElementById("audio").play();
-  letThereBelight();
+const playBtn = document.getElementsByClassName("playBtn")[0];
+let firstTime = true;
+
+playBtn.addEventListener("click", () => {
+  if (playBtn.textContent === "Start") {
+    // O áudio não está sendo reproduzido
+    document.getElementById("audio").play();
+    //Configura o render pela primeira vez
+    if(firstTime) {
+      letThereBelight();
+      firstTime = false;
+    }
+    playBtn.textContent = "Stop";
+  } else {
+    // O áudio já está sendo reproduzido
+    document.getElementById("audio").pause();
+    playBtn.textContent = "Start";
+  }
 });
 
 document
