@@ -122,12 +122,38 @@ function handleFile(e) {
     .getElementById("audio")
     .setAttribute("src", URL.createObjectURL(files[0]));
   document.getElementById("audio").load();
+  document.getElementById("audio").play();
 }
 
-document.getElementsByClassName("playBtn")[0].addEventListener("click", () => {
+document
+  .getElementsByClassName("repoContainer")[0]
+  .addEventListener("click", () => {
+    window.open(
+      "https://github.com/lnardon/3DMusicVisualizer",
+      "target=_blank"
+    );
+  });
+
+document.getElementsByClassName("startBtn")[0].addEventListener("click", () => {
   document.getElementById("audio").play();
   letThereBelight();
+  document.getElementsByClassName("startBtn")[0].style.display = "none";
+  document.getElementsByClassName("controls")[0].style.display = "flex";
 });
+
+document.getElementsByClassName("playBtn")[0].addEventListener("click", () => {
+  if (document.getElementById("audio").paused) {
+    document.getElementById("audio").play();
+  } else {
+    document.getElementById("audio").pause();
+  }
+});
+
+document
+  .getElementsByClassName("uploadBtn")[0]
+  .addEventListener("click", () => {
+    document.getElementById("fileUpload").click();
+  });
 
 document
   .getElementById("fileUpload")

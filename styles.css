@@ -16,6 +16,35 @@ canvas {
   height: 100% !important;
 }
 
+.repoContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  top: 2rem;
+  right: 2rem;
+  background-color: #fafafae3;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.4s ease-in-out;
+  padding: 0.5rem 0.75rem;
+}
+
+.repoContainer:hover {
+  transform: scale(1.07);
+}
+
+.githubLogo {
+  width: 1.75rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .title {
   position: absolute;
   top: 1.5rem;
@@ -41,27 +70,44 @@ canvas {
 }
 
 #audio {
-  position: absolute;
-  z-index: 2;
-  top: 1.5rem;
-  right: 1.5rem;
+  display: none;
 }
 
 .controls {
+  display: none;
   z-index: 4;
   position: absolute;
   bottom: 1rem;
   left: 50%;
   transform: translate(-50%, 0%);
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.25rem;
-  display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 9px 1px rgba(7, 7, 7, 0.1);
+  box-shadow: 0px 0px 11px 1px rgba(255, 255, 255, 0.11);
+  background-color: #3615ee;
+}
+
+.uploadBtn {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .playBtn {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#fileUpload {
+  display: none;
+  cursor: pointer;
+}
+
+.startBtn {
   padding: 0.5rem 1.25rem;
   cursor: pointer;
   font-size: 1.125rem;
@@ -70,9 +116,10 @@ canvas {
   background-color: rgb(52, 245, 27);
   border-radius: 0.125rem;
   transition: all 0.5s ease;
+  position: absolute;
 }
 
-.playBtn:hover {
+.startBtn:hover {
   transform: scale(1.1);
 }
 

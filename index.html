@@ -16,10 +16,11 @@
     />
   </head>
   <body>
-    <div id="titleContainer">
-      <h1 class="title">3D Music Visualizer</h1>
-      <h3 class="musicName">Vivaldi - Four Seasons (Winter)</h3>
+    <div class="repoContainer">
+      <img class="githubLogo" src="/github.png" alt="Github Logo" />
+      <p class="name">View on Github</p>
     </div>
+    <div id="titleContainer"></div>
     <audio
       id="audio"
       src="./winter-short.mp3"
@@ -27,8 +28,10 @@
       controls
     ></audio>
     <canvas id="canvas"></canvas>
+    <button class="startBtn">Start</button>
     <div class="controls">
-      <button class="playBtn">Start</button>
+      <button class="uploadBtn">Upload Music</button>
+      <button class="playBtn">Play/Pause</button>
       <input type="file" name="fileUpload" id="fileUpload" />
     </div>
   </body>
