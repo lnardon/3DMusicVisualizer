@@ -144,8 +144,15 @@ document.getElementsByClassName("startBtn")[0].addEventListener("click", () => {
 document.getElementsByClassName("playBtn")[0].addEventListener("click", () => {
   if (document.getElementById("audio").paused) {
     document.getElementById("audio").play();
+    document.getElementsByClassName("playBtn")[0].children[0].src =
+      "/pause.svg";
+    document.getElementsByClassName("playBtn")[0].children[1].innerText =
+      "Pause";
   } else {
     document.getElementById("audio").pause();
+    document.getElementsByClassName("playBtn")[0].children[0].src = "/play.svg";
+    document.getElementsByClassName("playBtn")[0].children[1].innerText =
+      "Play";
   }
 });
 

@@ -14,13 +14,13 @@
       name="description"
       content="A 3d music Visualizer using Three.js and custom shaders."
     />
+    <link rel="shortcut icon" href="/play.svg" type="image/x-icon" />
   </head>
   <body>
     <div class="repoContainer">
       <img class="githubLogo" src="/github.png" alt="Github Logo" />
       <p class="name">View on Github</p>
     </div>
-    <div id="titleContainer"></div>
     <audio
       id="audio"
       src="./winter-short.mp3"
@@ -30,8 +30,14 @@
     <canvas id="canvas"></canvas>
     <button class="startBtn">Start</button>
     <div class="controls">
-      <button class="uploadBtn">Upload Music</button>
-      <button class="playBtn">Play/Pause</button>
+      <button class="uploadBtn">
+        <img src="/upload.svg" alt="Upload" />
+        <p>Upload Music</p>
+      </button>
+      <button class="playBtn">
+        <img src="/pause.svg" alt="Play" />
+        <p>Pause</p>
+      </button>
       <input type="file" accept="audio/*" name="fileUpload" id="fileUpload" />
     </div>
   </body>

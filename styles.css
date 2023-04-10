@@ -8,6 +8,7 @@ html {
   width: 100vw;
   height: 100vh;
   background-color: #111111;
+  overflow: hidden;
 }
 
 canvas {
@@ -45,17 +46,6 @@ canvas {
   font-weight: 700;
 }
 
-.title {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  font-size: 2.5rem;
-  font-weight: 700;
-  z-index: 1;
-  color: #fff;
-  animation: appear 1.1s ease forwards;
-}
-
 .musicName {
   position: absolute;
   top: 4.25rem;
@@ -65,7 +55,6 @@ canvas {
   z-index: 1;
   color: #f1f1f1;
   font-style: italic;
-  animation: appear 1.1s 0.5s ease forwards;
   opacity: 0;
 }
 
@@ -80,12 +69,28 @@ canvas {
   bottom: 1rem;
   left: 50%;
   transform: translate(-50%, 0%);
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   border-radius: 0.25rem;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 11px 1px rgba(255, 255, 255, 0.11);
-  background-color: #3615ee;
+  background-color: #f1f1f5;
+  animation: popUp 0.9s ease-in-out forwards;
+  gap: 1rem;
+}
+
+.controls > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+}
+
+.controls > button > img {
+  width: 2rem;
 }
 
 .uploadBtn {
@@ -108,19 +113,25 @@ canvas {
 }
 
 .startBtn {
+  transform: translate(-50%, 0%);
   padding: 0.5rem 1.25rem;
   cursor: pointer;
   font-size: 1.125rem;
   font-weight: 700;
   border: none;
-  background-color: rgb(52, 245, 27);
+  background-color: transparent;
   border-radius: 0.125rem;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-in-out;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px solid rgb(27, 245, 100);
+  color: rgb(27, 245, 100);
 }
 
 .startBtn:hover {
-  transform: scale(1.1);
+  background-color: rgb(27, 245, 100);
+  color: #111111;
 }
 
 #fileUpload {
@@ -129,14 +140,14 @@ canvas {
   color: #f1f1f1;
 }
 
-@keyframes appear {
+@keyframes popUp {
   from {
     opacity: 0;
-    left: 0rem;
+    bottom: -3rem;
   }
 
   to {
     opacity: 1;
-    left: 1rem;
+    bottom: 2rem;
   }
 }
