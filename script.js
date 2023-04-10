@@ -64,7 +64,7 @@ function letThereBelight() {
       value: 3.0,
     },
   };
-  const geometry = new THREE.PlaneGeometry(64, 64, 64, 64);
+  const geometry = new THREE.SphereGeometry(64, 64, 64, 64);
   const material = new THREE.ShaderMaterial({
     uniforms: uniforms,
     vertexShader: vertexShader,
