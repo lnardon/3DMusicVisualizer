@@ -26,6 +26,6 @@ export const fragmentShader = `
   uniform float uTime;
 
   void main() {
-    gl_FragColor = vec4(exp(z),tan(z*acos(x)),z, 1.0);
+    gl_FragColor = vec4(exp(z),tan(z*asin(x)),z, 1.0);
   }
 `;

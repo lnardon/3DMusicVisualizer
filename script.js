@@ -23,7 +23,7 @@ function letThereBelight() {
     0.1,
     3000
   );
-  camera.position.z = 90;
+  camera.position.z = 175;
 
   // CONTROLS
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -61,7 +61,7 @@ function letThereBelight() {
     },
     uAmp: {
       type: "f",
-      value: 3.0,
+      value: 7.0,
     },
   };
   const geometry = new THREE.SphereGeometry(64, 64, 64, 64);
