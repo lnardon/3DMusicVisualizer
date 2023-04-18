@@ -3,6 +3,7 @@
 A 3D music visualizer using Three.js and custom GLSL shaders.
 
 <p align="center" style="height: 450px">
+  <video src="./demo.webm">
   <img src="./demo.gif">
 </p>
 
