@@ -14,7 +14,7 @@ precision mediump float;
   void main() {
     mat4 projectViewModel = projectionMatrix * viewMatrix * modelMatrix;
     float distance = length(position);
-    float z = (uFreqArray[0]/72.0)*cos(-PI*distance*frequency+(uTime/256.0));
+    float z = cos((uFreqArray[0]/72.0)*cos(-PI*distance*frequency+(uTime/256.0)))*uFreqArray[int(x*y/256.0)]/350.0;
     gl_Position = projectViewModel * vec4(position.x+(cos(z)), position.y, z,0.350);
   }
 `;

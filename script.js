@@ -18,12 +18,12 @@ function letThereBelight() {
 
   //CAMERA
   const camera = new THREE.PerspectiveCamera(
-    55,
+    60,
     window.innerWidth / window.innerHeight,
     0.1,
     3000
   );
-  camera.position.z = 175;
+  camera.position.z = 75;
 
   // CONTROLS
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -73,7 +73,7 @@ function letThereBelight() {
     wireframe: true,
   });
   const mesh = new THREE.Mesh(geometry, material);
-  mesh.rotateX(Math.PI / 1.5);
+  mesh.rotateX(Math.PI / 1.85);
   scene.add(mesh);
 
   function setupAudioContext() {
