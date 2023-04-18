@@ -64,7 +64,7 @@ function letThereBelight() {
       value: 7.0,
     },
   };
-  const geometry = new THREE.PlaneGeometry(64, 64, 64, 64);
+  const geometry = new THREE.PlaneGeometry(64, 64, 128, 128);
   const material = new THREE.ShaderMaterial({
     uniforms: uniforms,
     vertexShader: vertexShader,
@@ -83,7 +83,7 @@ function letThereBelight() {
     analyser = audioContext.createAnalyser();
     source.connect(analyser);
     analyser.connect(audioContext.destination);
-    analyser.fftSize = 32;
+    analyser.fftSize = Math.pow(2,10);
     dataArray = new Uint8Array(analyser.frequencyBinCount);
   }
 
@@ -98,6 +98,7 @@ function letThereBelight() {
   //RENDER LOOP
   function render(time) {
     analyser.getByteFrequencyData(dataArray);
+    console.log(dataArray);
     uniforms.uFreqArray.value = dataArray;
     uniforms.uTime.value = time;
     controls.update();
