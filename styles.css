@@ -9,6 +9,7 @@ html {
   height: 100vh;
   background-color: #111111;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 canvas {
@@ -38,24 +39,12 @@ canvas {
 }
 
 .githubLogo {
-  width: 1.75rem;
+  width: 1.5rem;
 }
 
 .name {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 700;
-}
-
-.musicName {
-  position: absolute;
-  top: 4.25rem;
-  left: 3rem;
-  font-size: 1rem;
-  font-weight: 300;
-  z-index: 1;
-  color: #f1f1f1;
-  font-style: italic;
-  opacity: 0;
 }
 
 #audio {
