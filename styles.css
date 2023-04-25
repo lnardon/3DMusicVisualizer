@@ -78,6 +78,7 @@ canvas {
   transition: all 0.4s ease-in-out;
   border: none;
   border-radius: 0.25rem;
+  outline: none;
 }
 
 .controls > button:hover {
