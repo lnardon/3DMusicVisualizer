@@ -50,7 +50,7 @@ function letThereBelight() {
       value: 7.0,
     },
   };
-  const geometry = new THREE.PlaneGeometry(64, 64, 256, 256);
+  const geometry = new THREE.PlaneGeometry(64, 64, 512, 512);
   const material = new THREE.ShaderMaterial({
     uniforms: uniforms,
     vertexShader: vertexShader,

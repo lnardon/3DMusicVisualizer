@@ -1,9 +1,9 @@
 # [3DMusicVisualizer](https://lnardon.github.io/3DMusicVisualizer/)
 
-A 3D music visualizer using Three.js and custom GLSL shaders.
+A 3D music visualizer that interacts with the music using Three.js and custom GLSL shaders.
 
 <p align="center" style="height: 450px">
-  <img src="./demo.webm">
+  <img src="./demo.PNG">
 </p>
 
 ### What was used
