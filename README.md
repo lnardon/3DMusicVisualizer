@@ -6,6 +6,8 @@ A 3D music visualizer that interacts with the music using Three.js and custom GL
   <img src="./demo.PNG">
 </p>
 
+[Access it here](https://lnardon.github.io/3DMusicVisualizer/)
+
 ### What was used
 
 - Javascript
